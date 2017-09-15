@@ -1,4 +1,21 @@
 <h1>My Adverts</h1>
-<p>
-  my-adverts works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <button (click)="getAdverts()">Get Adverts</button>
+    <a
+      href="#"
+      class="list-group-item clearfix"
+      *ngFor="let advert of adverts">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{advert.title}}</h4>
+        <p class="list-group-item-text">{{advert.description}}</p>
+      </div>
+      <span class="pull-right">
+        <img
+          src=""
+          alt="{{advert.title}}"
+          class="img-responsive">
+      </span>
+    </a>
+  </div>
+</div>

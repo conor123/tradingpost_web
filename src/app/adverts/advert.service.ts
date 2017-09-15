@@ -16,4 +16,10 @@ export class AdvertService {
       advert,
       {headers: headers});
   }
+
+  getAdverts(){
+    return this.http.get(
+      this.config.getApiUrl() + 'data.json'
+    );
+  }
 }
