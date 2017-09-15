@@ -7,7 +7,7 @@ export class AdvertService {
 
   constructor(private http: Http, private config: ConfigService) {}
 
-  putAdvert(advert: any){
+  postAdvert(advert: any){
     const headers = new Headers({
       'Access-Control-Allow-Origin': 'http://localhost:4200'
     });

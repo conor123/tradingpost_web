@@ -4,7 +4,8 @@ import { HttpModule } from '@angular/http';
 
 import { CreateAdvertComponent } from './create-advert.component';
 import { AdvertService} from '../advert.service';
-import {ConfigService} from "../../config/config.service";
+import { ConfigService } from "../../config/config.service";
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('CreateAdvertComponent', () => {
   let component: CreateAdvertComponent;
@@ -13,7 +14,7 @@ describe('CreateAdvertComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CreateAdvertComponent ],
-      imports: [FormsModule, HttpModule],
+      imports: [FormsModule, HttpModule, RouterTestingModule],
       providers: [AdvertService, ConfigService]
     })
     .compileComponents();

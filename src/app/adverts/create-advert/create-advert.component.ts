@@ -27,7 +27,7 @@ export class CreateAdvertComponent implements OnInit {
   }
 
   saveAdvert(){
-    this.advertService.putAdvert(this.advert).subscribe(
+    this.advertService.postAdvert(this.advert).subscribe(
       response => console.log(response),
       error => console.log(error)
     );
