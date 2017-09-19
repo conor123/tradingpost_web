@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-xs-12">
     <button (click)="getAdverts()">Get Adverts</button>
-    <a
+    <!--<a
       href="#"
       class="list-group-item clearfix"
       *ngFor="let advert of adverts">
@@ -16,6 +16,10 @@
           alt="{{advert.title}}"
           class="img-responsive">
       </span>
-    </a>
+    </a>-->
+    <hr>
+    <ul class="list-group" *ngFor='let advert of adverts'>
+      <li class="list-group-item">Advert: {{advert.title}} - {{advert.description}}</li>
+    </ul>
   </div>
 </div>
