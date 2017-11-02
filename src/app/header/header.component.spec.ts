@@ -1,16 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpModule } from '@angular/http';
 import { HeaderComponent } from './header.component';
 import { AppComponent } from '../app.component';
 import { ConfigService } from '../config/config.service';
 import { AuthService } from "../auth/auth.service";
+import { AdvertService } from "../adverts/advert.service";
 
 describe('Component: Header', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent],
-      imports: [RouterTestingModule],
-      providers: [AppComponent, ConfigService, AuthService]
+      imports: [RouterTestingModule, HttpModule],
+      providers: [AppComponent, ConfigService, AuthService, AdvertService]
     });
   })
 

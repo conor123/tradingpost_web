@@ -9,12 +9,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   styleUrls: ['./my-adverts.component.css']
 })
 export class MyAdvertsComponent  {
-  adverts = [
-    {
-      title: "lp",
-      description: "guitar"
-    }
-  ];
+  adverts = [];
 
   constructor(private advertService: AdvertService) { }
 
@@ -23,29 +18,15 @@ export class MyAdvertsComponent  {
 
   getAdverts(){
     this.advertService.getAdverts()
-      // .map(res => res.json().data)
       .subscribe(
         (response: Response) => {
           const data = response.json();
-          let keys = (<any>Object).values(data);
-          for(const key of keys){
-            this.adverts.push(key);
+          let values = (<any>Object).values(data);
+          for(const value of values){
+            this.adverts.push(value);
           }
-
           return this.adverts;
-          // for(const advert of response){
-          //   //advert.name =
-          // }
-          // return this.adverts;
         },
-
-        // (adverts: any[]) => this.adverts = adverts,
-
-        // (res) => res.json(),
-        // (response) => console.log(response),
-
-        // (adverts: any[]) => this.adverts = adverts,
-
         (error) => console.log(error)
 
     );

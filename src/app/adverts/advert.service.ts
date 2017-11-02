@@ -28,13 +28,5 @@ export class AdvertService {
 
   getAdverts(){
     return this.http.get(this.config.getApiUrl() + 'data.json')
-    //   .map((response: Response) => {
-    //     const data = response.json();
-    //     for (const advert of data){
-    //       this.adverts.push(advert);
-    //     }
-    //     return this.adverts;
-    //   }
-    // );
   }
 }

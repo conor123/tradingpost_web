@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from './config/config.service';
 
 import * as firebase from 'firebase';
+import { AdvertService } from "./adverts/advert.service";
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,7 @@ export class AppComponent implements OnInit{
   apiKey;
   apiDomain;
 
-  constructor(config: ConfigService){
+  constructor(private config: ConfigService, private advertService: AdvertService, private http: Http ){
     this.apiKey = config.getApiKey(),
     this.apiDomain = config.getApiDomain()
   }
