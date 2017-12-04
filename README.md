@@ -26,6 +26,8 @@ Module not found: Error: Can't resolve './$$_gendir/app/app.module.ngfactory' in
  @ ./src/main.ts 4:0-74
  @ multi ./src/main.ts
 
+## Tag
+git tag -a v0.1.1 -m "Message here"
 
 ## Running unit tests
 

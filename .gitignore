@@ -5,7 +5,7 @@
 /src/app/config/dev-config.json
 
 # compiled output
-/dist
+
 /tmp
 /out-tsc
 
