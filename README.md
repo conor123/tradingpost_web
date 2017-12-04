@@ -1,4 +1,6 @@
-# AngularAuth
+# Trading Post
+
+# Based on AngularAuth
 Building a stateless user registration and authentication web application.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
@@ -14,6 +16,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+ng build --prod --aot=false
+
+fixes: 
+
+ERROR in ./src/main.ts
+Module not found: Error: Can't resolve './$$_gendir/app/app.module.ngfactory' in '/Users/cr/projects/tradingpost-web/src'
+ @ ./src/main.ts 4:0-74
+ @ multi ./src/main.ts
+
 
 ## Running unit tests
 

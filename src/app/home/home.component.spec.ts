@@ -3,13 +3,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HomeComponent } from './home.component';
 import { AppComponent } from '../app.component';
 import { ConfigService } from '../config/config.service';
+import { AdvertService } from "../adverts/advert.service";
+import { HttpModule } from "@angular/http";
 
 describe('Component: Home', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HomeComponent],
-      imports: [RouterTestingModule],
-      providers: [AppComponent, ConfigService]
+      imports: [RouterTestingModule, HttpModule],
+      providers: [AppComponent, ConfigService, AdvertService]
     });
   })
 

@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
+import { Http } from "@angular/http";
 
 import { AppComponent } from '../app.component';
+import { AdvertService } from "../adverts/advert.service";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
-  private title: string;
-  constructor(appComponent: AppComponent){
+  title: string;
+  constructor(private appComponent: AppComponent, private advertService: AdvertService, private http: Http){
     this.title = appComponent.title;
   }
 }
