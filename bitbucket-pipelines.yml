@@ -4,10 +4,12 @@
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
 # image: atlassian/default-image:latest
-
+image: cgswong/aws
+ 
 pipelines:
-  default:
-    - step:
-        script:
-          - echo "Beginning Pipeline!"
-          - aws s3 sync . s3://test.trading.conortek.net
+  branches:
+    master:
+      - step:
+          script:
+            - echo "Beginning Pipeline!"
+            - aws s3 sync src/ s3://test.trading.conortek.net
