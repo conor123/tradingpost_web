@@ -29,6 +29,11 @@ Module not found: Error: Can't resolve './$$_gendir/app/app.module.ngfactory' in
 ## Tag
 git tag -a v0.1.1 -m "Message here"
 
+## Sync with bitbucket
+remote add bitbucket https://username@bitbucket.org/username/reponame.git
+git pull # to sync and differences like the pipeline yml file
+git push bitbucket master
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

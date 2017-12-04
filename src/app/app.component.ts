@@ -11,7 +11,7 @@ import { Http } from '@angular/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'Angular Auth';
+  title = 'Trading Post';
   apiKey;
   apiDomain;
 
