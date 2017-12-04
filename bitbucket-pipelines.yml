@@ -10,4 +10,4 @@ pipelines:
     - step:
         script:
           - echo "Beginning Pipeline!"
-          - s3 sync src/ s3://test.trading.conortek.net
+          - s3 sync . s3://test.trading.conortek.net
