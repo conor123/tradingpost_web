@@ -10,4 +10,4 @@ pipelines:
     - step:
         script:
           - echo "Beginning Pipeline!"
-          - aws s3 --region "eu-west-1" sync public/ s3://trading.conortek.net --cache-control "public, max-age=14400" --delete
+          - aws s3 sync src/ s3://test.trading.conortek.net --cache-control "public, max-age=14400" --delete
